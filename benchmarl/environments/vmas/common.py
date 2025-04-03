@@ -44,6 +44,7 @@ class VmasClass(TaskClass):
         return True
 
     def max_steps(self, env: EnvBase) -> int:
+        print(self.config)
         return self.config["max_steps"]
 
     def group_map(self, env: EnvBase) -> Dict[str, List[str]]:
@@ -86,6 +87,7 @@ class VmasTask(Task):
     """Enum for VMAS tasks."""
 
     BALANCE = None
+    BOIDS = None
     SAMPLING = None
     NAVIGATION = None
     TRANSPORT = None
